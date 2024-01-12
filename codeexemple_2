@@ -8,7 +8,7 @@ pipeline {
         password(name: 'SONAR_SERVER_PWD', description: 'Enter SONAR password')
     }
     stages {
-        stage('Printing name') {
+        stage('Build') {
             steps {
                 script {
                     def name = "${params.NAME}"
@@ -19,5 +19,7 @@ pipeline {
                 }
             }
         }
+        stage('Test'){}
+        stage('Deploy') {}
    }
 }
