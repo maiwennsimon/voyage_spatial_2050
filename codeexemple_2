@@ -15,7 +15,7 @@ pipeline {
                     def desc = "${params.DESC}"
                     echo name
                     echo desc
-                    echo "${params.BRANCH}
+                    echo "${params.BRANCH}"
                 }
             }
         }
