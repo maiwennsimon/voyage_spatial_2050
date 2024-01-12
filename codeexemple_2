@@ -19,7 +19,27 @@ pipeline {
                 }
             }
         }
-        stage('Test'){}
-        stage('Deploy') {}
+        stage('Test'){
+           steps {
+                script {
+                    def name = "${params.NAME}"
+                    def desc = "${params.DESC}"
+                    echo name
+                    echo desc
+                    echo "${params.BRANCH}"
+                }
+            }
+        }
+        stage('Deploy') {
+                steps {
+                script {
+                    def name = "${params.NAME}"
+                    def desc = "${params.DESC}"
+                    echo name
+                    echo desc
+                    echo "${params.BRANCH}"
+                }
+            }
+        }
    }
 }
